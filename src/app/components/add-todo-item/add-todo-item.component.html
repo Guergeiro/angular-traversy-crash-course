@@ -1,0 +1,12 @@
+<form [formGroup]="this.getForm()" (ngSubmit)="this.onSubmit(this.getForm())">
+  <div class="form-group">
+    <input type="text" name="title" formControlName="title" />
+  </div>
+  <button
+    type="submit"
+    [disabled]="this.getForm().invalid"
+    class="btn btn-success"
+  >
+    <fa-icon [icon]="getIcon()"></fa-icon>
+  </button>
+</form>

@@ -1,0 +1,19 @@
+<div class="form-group">
+  <div class="form-check">
+    <input
+      (change)="onToggle()"
+      type="checkbox"
+      class="form-check-input"
+      id="{{ todo!.id }}"
+      [checked]="todo!.completed"
+    />
+    <label
+      [ngClass]="{ 'is-completed': todo!.completed }"
+      for="{{ todo!.id }}"
+      >{{ todo!.title }}</label
+    >
+    <button (click)="onDelete(todo)" type="button" class="btn btn-danger">
+      <fa-icon [icon]="getIcon()"></fa-icon>
+    </button>
+  </div>
+</div>
